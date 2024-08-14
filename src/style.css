@@ -97,9 +97,31 @@ section{
 
        a{
         color: var(--white);
-        font-size: 20px;
+        font-size: 30px;
         margin: 60px;
        }
+    }
+  }
+}
+
+.two-page{
+  .container{
+    h1{
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+  }
+  .box{
+    .text-info{
+      width: 700px;
+      margin-left: 50px;
+    }
+    .image{
+      position: relative;
+      width: 800px;
+      height: 400px;
+      overflow: hidden;
     }
   }
 }
