@@ -26,7 +26,7 @@
     <!-- ===== 1 page section start ===== -->
     <section class="one-page">
         <div class="container">
-        <h1>Reveal Elements On Scroll</h1>
+        <h1 class="header">Reveal Elements On Scroll</h1>
             <div class="box">
                 <div class="image">
                     <img src="/img/img1.jpg" alt="">
@@ -54,7 +54,7 @@
     <!-- ===== 2 page section start ===== -->
     <section class="two-page">
         <div class="container">
-            <h1>Lorem Ipsum</h1>
+            <h1 class="header">Lorem, ipsum dolor.</h1>
             <div class="box">
                 <div class="image">
                     <img src="/img/img2.jpg" alt="">
@@ -76,7 +76,7 @@
     <!-- ===== 3 page section start ===== -->
     <section class="three-page">
         <div class="container">
-          <h1>Lorem Ipsum</h1>
+          <h1 class="header">Lorem ipsum dolor sit amet.</h1>
             <div class="box">
                 <div class="media-info">
                     <li><a href="#" class="item"><i class="bx bxl-facebook-circle"></i> Facebook</a></li>
@@ -94,15 +94,23 @@
     <!-- ===== 3 page section end ===== -->
 
 
-
-
+    <!-- common reveal options to create reveal animations -->
     <script>
         ScrollReveal({
-            reset: true,
+            // reset: true,
             distance: '60px',
             duration: 2500,
-            delay: 400
+            delay: 600
         });
+
+        // target elements, and specify options to create reveal animations
+
+        ScrollReveal().reveal('.header', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.one-page .image, .text-info', { delay: 600, origin: 'bottom' });
+        ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' });
+        ScrollReveal().reveal('.icons i', { delay: 500, origin: 'bottom' , interval: 200 });
+        ScrollReveal().reveal('.two-page .image', { delay: 500, origin: 'top' });
+        ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
     </script>
 
     <!-- ===== link to JS File ===== -->
