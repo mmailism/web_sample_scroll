@@ -14,7 +14,7 @@
  --yellow: #ffbf00;
  --white: #fff;
  --grey:#aaa;
- --box-shadow-pp: 0px 0px 30px rgba(250, 107, 219, 0.4);
+ --box-shadow-pp: 1px 5px 50px rgba(250, 107, 219, 0.4);
  --border: 2px solid rgba(0,0,0,.8);
  --outline: 1px solid rgba(0,0,0,.1);
 }
@@ -28,11 +28,50 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px;
+  padding: 80px 100px;
   color: var(--white);
 }
 
-.one-page{
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.box{
+  position: relative;
+  width: 1150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+
+    img{
+      z-index: 111;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .text
+}
+
+/* .one-page{
   h1{
     color: var(--white);
     font-size: 50px;
@@ -59,6 +98,8 @@ section{
           width: 800px;
           height: 400px;
           overflow: hidden;
+          border-radius: 10px;
+          box-shadow: var(--box-shadow-pp);
 
           img{
             z-index: 111;
@@ -68,8 +109,6 @@ section{
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow-pp);
           }
         }
         .text-box{
@@ -102,26 +141,47 @@ section{
        }
     }
   }
-}
+} */
 
-.two-page{
+/*.two-page{
   .container{
     h1{
       font-size: 40px;
       text-align: center;
       margin-bottom: 80px;
     }
-  }
-  .box{
-    .text-info{
-      width: 700px;
-      margin-left: 50px;
+    .box{
+      .text-info{
+        width: 700px;
+        margin-left: 50px;
+        z-index: 222;
+            color: var(--white);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            max-width: 400px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transform: translate(-80px, 50px);
+      }
+      .image{
+        position: relative;
+        width: 800px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow-pp);
+
+        img{
+          z-index: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
-    .image{
-      position: relative;
-      width: 800px;
-      height: 400px;
-      overflow: hidden;
-    }
   }
-}
+}*/
