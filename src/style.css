@@ -16,6 +16,7 @@
  --grey:#aaa;
  --box-shadow-pp: 0px 0px 50px rgba(250, 107, 219, 0.4);
  --box-shadow-b: 0px 0px 50px rgba(253, 251, 95, 0.5);
+ --box-shadow-p: 0px 0px 50px rgba(255, 111, 142, 0.5);
  --border: 1px solid rgba(255,255,255,0.1);
  --outline: 1px solid rgba(0,0,0,.1);
 }
@@ -135,117 +136,57 @@ h1{
 }
 }
 
-/* .one-page{
-  h1{
-    color: var(--white);
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .container{
-    display: flex;
+.three-page{
+  .box{
     position: relative;
     width: 1150px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
-    .box{
-        position: relative;
-        width: 1150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  
+    .image{
+      position: relative;
+      width: 800px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: var(--box-shadow-p);
+  
+      img{
+        z-index: 111;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .media-info{
+      width: 400px;
+      margin-left: 50px;
 
-        .image{
-          position: relative;
-          width: 800px;
-          height: 400px;
-          overflow: hidden;
-          border-radius: 10px;
-          box-shadow: var(--box-shadow-pp);
+      li{
+        list-style: none;
+        font-size: 1.4em;
 
-          img{
-            z-index: 111;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-        .text-box{
-          z-index: 222;
+        a{
           color: var(--white);
-          background: rgba(255,255,255,0.1);
-          backdrop-filter: blur(20px);
-          padding: 40px;
-          max-width: 400px;
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 10px;
-          transform: translate(-80px, 50px);
-
-          h3{
-            font-size: 30px;
-            margin-bottom: 10px;
-          }
-          p{
-            font-size: 14px;
-          }
+          text-decoration: none;
         }
-    }
-    .icons{
-      margin-top: 100px;
-
-       a{
-        color: var(--white);
-        font-size: 30px;
-        margin: 60px;
-       }
-    }
-  }
-} */
-
-/*.two-page{
-  .container{
-    h1{
-      font-size: 40px;
-      text-align: center;
-      margin-bottom: 80px;
-    }
-    .box{
-      .text-info{
-        width: 700px;
-        margin-left: 50px;
-        z-index: 222;
-            color: var(--white);
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(20px);
-            padding: 40px;
-            max-width: 400px;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 10px;
-            transform: translate(-80px, 50px);
       }
-      .image{
-        position: relative;
-        width: 800px;
-        height: 400px;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: var(--box-shadow-pp);
-
-        img{
-          z-index: 0;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+      li:not(:last-child){
+        margin-bottom: 50px;
+      }
+      li:nth-child(1), li:nth-child(5){
+        padding-left: 100px;
+      }
+      li:nth-child(2), li:nth-child(4){
+        padding-left: 50px;
       }
     }
   }
-}*/
+}
+
+.three-page{
+  margin-bottom: 100px;
+}
